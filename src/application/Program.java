@@ -41,6 +41,14 @@ public class Program {
 		sellerdao.insert(newSeller);
 		
 		System.out.println("Inserido! Novo id = " + newSeller.getId());
+		
+		System.out.println("\n==== Teste 5: Seller Update ====");
+		seller = sellerdao.findById(1);
+		seller.setName("GuiduSm");
+		
+		sellerdao.update(seller);
+		
+		System.out.println("Update completo!");
 	}
 
 }
