@@ -23,7 +23,7 @@ public class Program2 {
 		
 		System.out.println("==== Teste 2: Método de Update ====");
 		
-		System.out.println("Digite um novo nome para uma categoria: ");
+		System.out.println("Digite um novo nome para o Departamento: ");
 		dep.setName(sc.nextLine());
 		System.out.println("Digite o id para fazer o update: ");
 		dep.setId(sc.nextInt());
@@ -31,6 +31,18 @@ public class Program2 {
 		depDao.update(dep);
 		
 		System.out.println("Update realizado com sucesso! ");
+		
+		System.out.println("==== Teste 3: Método de Delete ====");
+		
+		System.out.println("Informe o Id do Departamento a deletar: ");
+		int id = sc.nextInt();
+		
+		depDao.deleteById(id);
+		
+		System.out.println("Departamento Deletado com sucesso!");
+		
+		
+		
 		sc.close();
 	}
 
