@@ -21,7 +21,7 @@ public class Program2 {
 		
 		System.out.println("Inserção feita com sucesso! Novo id: "+ dep.getId());
 		
-		System.out.println("==== Teste 2: Método de Update ====");
+		System.out.println("\n==== Teste 2: Método de Update ====");
 		
 		System.out.println("Digite um novo nome para o Departamento: ");
 		dep.setName(sc.nextLine());
@@ -32,7 +32,7 @@ public class Program2 {
 		
 		System.out.println("Update realizado com sucesso! ");
 		
-		System.out.println("==== Teste 3: Método de Delete ====");
+		System.out.println("\n==== Teste 3: Método de Delete ====");
 		
 		System.out.println("Informe o Id do Departamento a deletar: ");
 		int id = sc.nextInt();
@@ -41,7 +41,14 @@ public class Program2 {
 		
 		System.out.println("Departamento Deletado com sucesso!");
 		
+		System.out.println("\n==== Teste 4: Método de Procura por Id ====");
 		
+		System.out.println("Informe um id para procurar: ");
+		id = sc.nextInt();
+		
+		Department newDep = depDao.findById(id);
+		
+		System.out.println("Departamento encontrado com sucesso!\n"+ newDep);
 		
 		sc.close();
 	}
