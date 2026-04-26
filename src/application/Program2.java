@@ -1,5 +1,6 @@
 package application;
 
+import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
@@ -22,9 +23,7 @@ public class Program2 {
 		System.out.println("Inserção feita com sucesso! Novo id: "+ dep.getId());
 		
 		System.out.println("\n==== Teste 2: Método de Update ====");
-		
-		System.out.println("Digite um novo nome para o Departamento: ");
-		dep.setName(sc.nextLine());
+		dep.setName("Financeiro");
 		System.out.println("Digite o id para fazer o update: ");
 		dep.setId(sc.nextInt());
 		
@@ -49,6 +48,13 @@ public class Program2 {
 		Department newDep = depDao.findById(id);
 		
 		System.out.println("Departamento encontrado com sucesso!\n"+ newDep);
+		
+		System.out.println("\n==== Teste 5: Método de Procura todos os Departamentos ====");
+		List<Department> list = depDao.findAll();
+		
+		for(Department a : list){
+			System.out.println(a);
+		}
 		
 		sc.close();
 	}
